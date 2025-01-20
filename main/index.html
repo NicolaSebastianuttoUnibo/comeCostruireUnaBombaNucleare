@@ -21,9 +21,15 @@
         }
 #gifContainer {
     display: none; 
+    position: fixed; /* Cambia da statico a fixed per sovrapporre il contenuto */
+    top: 0; /* Posiziona il contenitore in alto */
+    left: 0; /* Posiziona il contenitore a sinistra */
     width: 100%; 
     height: 100vh;
-  
+    background-color: rgba(255, 255, 255, 0.8); /* Sfondo semi-trasparente per evidenziare la GIF */
+    z-index: 9999; /* Assicurati che sia sopra altri contenuti */
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
 }
 
 
@@ -54,21 +60,77 @@
 <body>
 
     <h1>Inizio</h1>
-   
-  
-  
+
+<h2>Momento angolare orbitale</h2>
+<p>\(\hat{L}=\hat{r} \times \hat{p}=-i\hbar \hat{r} \times \vec{\nabla}\)</p>
+<p>Un vettore che non cambia segno sotto l’operatore parità è detto pseudo-vettore, il ostro amico momento angolare orbitale è un pseudo vettore</p>
+    <p>Il momento angolare orbital assume solo valori interi</p>
+
+    <h2>Momento angolare intrinseco (spin)</h2>
+    <p>I fermioni hanno spin semi-intero; i bosoni hanno spin intero</p>
+    <h2>Momento angolare totale</h2>
+    <p>\(\mathbf{J}=\mathbf{L}+\mathbf{S}\)</p>
+<h2>Quali sono le particelle fondamentali dell'universo?</h2>
+    <p>Elenco rapido:</p>
+  <strong>quarks: </strong> up, down, charm, strange, top, bottom (6)
+  <strong>leptoni: </strong> elettrone, muone, tau, neutrino elettronico, neutrino muonico, neutrino tau (6)
+  <strong>bosoni: </strong> gluone, fotone, bosone W, bosone Z, bosone di Higgs (5)
+
+<h2>Come siamo fatti?</h2>
+    <p>Noi siamo fatti con materia ordinaria: up, down, elettrone, neutrino elettronico ( questo ultimo introdotto per conservare energia, impulso e
+momento angolare nel decadimento \(\beta\). Questi quattro elementi appartengono alla prima famiglia fermionica.</p>
+<h2>Altre famiglie</h2>
+    <p>Ci sono altre due famiglie fermioniche: in totale tre. Cosa cambia? La massa. Questi interagiscono allo stesso identico modo nell’interazione elettromagnetica e
+forte. I leptoni odiano i gluoni e non interagiscono con essi: per questo le tre coppie interagiscono nello stesso identico modo nelle interazioni <strong>elettrodebole</strong></p>
+   <p><strong>Importante</strong> Il numero leptonico è conservato per ciascuno dei tre “flavour”.</p> 
+    <audio id="audio" src="https://www.soundjay.com/mechanical/sounds/explosion-02.mp3"></audio>
+
+ <h2>Parità</h2>
+
+    <p>\(\hat{P}f(r) = f(−r)\)</p>
+    <p>Siccome \({\hat{P}}^2=I\), allora gli autovalori di \(\hat{P}\)sono \(lambda=\pm 1\)  </p>
+    <p>Le armoniche sferiche sono autostati della parità: \(P Y_l^m (\theta, \Phi) \rightarrow (-1)^l Y_l^m (\theta, \Phi)  \)</p>
+    <p>In altre parole le armoniche sferiche sono autostati di \(\hat{P}\) con autovalore (-1)^l.</p>
+<p>\(P \Tsi (\mathbf{r_1}, \mathbf{r_2}) =  (-1)^l  P_1 P_2\)</p>
+    <p>In generale si ha \(P=\prod_{j=1,...,N} {P_{intrinseca}}_j\) \prod_{k=1,...,N} (-1)^{l_k}</p>
+<p>Una particella non può avere un momento di dipolo elettrico ed essere allo stesso tempo uno stato a parità definita. ovvero l’energia di una carica di prova nel campo nucleare cambierebbe sotto l’operazione di parità.</p>
+    <p>La parità intrinseca del fotone \(\gamma\) è negativa</p>
+    <p>La parità intrinseca di una coppia fermione-antifermione è negativa.</p>
+    <p>parità intrinseca dei protoni e neutroni come positiva.</p>
+    <p>di conseguenza antiprotoni e anti-neutroni hanno una parità negativa.</p>
+    <p>La parità è conservata nelle interazioni elettromagnetiche e forti.</p>
+    <p>non solo la parità era violata nelle interazioni deboli, ma che lo era in modo massimale.</p>
+    <p>\(P = {(-1)}^L x \)parità ntrinseca di ogni particella</p>
+    <p>La parità dei pioni è negativa</p>
+     <strong>collegamenti</strong>
+    <p>Momento angolare</p>
+    <p>Coniugazione di carica</p>
+    <p>Elicità</p>
+
+    <h2>I barioni</h2>
+    <p><strong>Numero barionico:</strong> i quarks hanno \(B=+\frac{1}{3}, gli antiquarks hanno \(B=-\frac{1}{3}, tutti gli altri hanno \(B=0\) \)</p>
+    <p>quark+antiquark=mesone \(B=0\)</p>
+        <p> 3 quark=barione \(B=+1\)</p>
+        <p> 3 antiquark=antibarione \(B=-1\)</p>
+<p>!!!non esistono mesoni o barioni col top!!!</p>
+<h2>I tre decadimenti:</h2>
+    <p>\(\mathbf{\alpha}\) nuclei di elio \(\mathbf{\beta}\) elettroni \(\mathbf{\gamma}\) fotoni</p>
+<h2>Cromodinamica quantistica</h2>
+    <p>I quark possono avere un colore: <strong>R</strong>ed <strong>G</strong>reen <strong>B</strong>lue</p>
+<p>Il gluone interagisce con quark dello stesso tipo, ma con colori diversi.</p>
+    <p>La costante di accoppiamento effettiva è la stessa, indipendentemente dal colore e dal sapore.</p>
+
+    
   <button id="fixedButton">NON TOCCARE!</button>
     <div id="gifContainer">
         <img id="gif" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjlod3RubWpjeTF4bzNiNWdyMjI5M3A0ZDlweGxuNG8zMTZzanAyayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/urp8cVywl1Sk8/giphy.gif" alt="Loading..." />
     </div>
 
-    <audio id="audio" src="https://www.soundjay.com/mechanical/sounds/explosion-02.mp3"></audio>
-
- 
+    
     <script>
         document.getElementById('fixedButton').addEventListener('click', function() {
             // Mostra la GIF
-            document.getElementById('gifContainer').style.display = 'block';
+            document.getElementById('gifContainer').style.display = 'flex';
             // Riproduci il suono
             var audio = document.getElementById('audio');
             audio.play();
