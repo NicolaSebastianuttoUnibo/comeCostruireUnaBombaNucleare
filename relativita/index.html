@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOP SECRET</title>
+    <style>
+        h1,h2{
+                        text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+             line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        #fixedButton {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+#gifContainer {
+    display: none; 
+    position: fixed; /* Cambia da statico a fixed per sovrapporre il contenuto */
+    top: 0; /* Posiziona il contenitore in alto */
+    left: 0; /* Posiziona il contenitore a sinistra */
+    width: 100%; 
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8); /* Sfondo semi-trasparente per evidenziare la GIF */
+    z-index: 9999; /* Assicurati che sia sopra altri contenuti */
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+
+        .hover-text {
+            position: relative; /* Aggiunto per il posizionamento corretto */
+            display: inline-block; /* Assicura che l'elemento occupi solo lo spazio necessario */
+        }
+
+        .hover-text::after {
+            content: attr(data-content);
+            position: absolute;
+            left: 0;
+            top: 100%;
+            opacity: 0; /* Inizialmente nascosto */
+            transition: opacity 0.3s ease; /* Transizione per l'effetto */
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc;
+            padding: 5px;
+            white-space: nowrap; /* Impedisce il ritorno a capo */
+            z-index: 1; /* Assicura che il testo sia sopra */
+        }
+
+        .hover-text:hover::after {
+            opacity: 1; /* Mostra il testo al passaggio del mouse */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Relatività ristretta</h1>
+<h2>Formule utili</h2>
+  <p><strong>!!!Userò le unità naturali!!!</strong></p>
+
+    
+  <button id="fixedButton">NON TOCCARE!</button>
+    <div id="gifContainer">
+        <img id="gif" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjlod3RubWpjeTF4bzNiNWdyMjI5M3A0ZDlweGxuNG8zMTZzanAyayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/urp8cVywl1Sk8/giphy.gif" alt="Loading..." />
+    </div>
+
+    
+    <script>
+        document.getElementById('fixedButton').addEventListener('click', function() {
+            // Mostra la GIF
+            document.getElementById('gifContainer').style.display = 'flex';
+            // Riproduci il suono
+            var audio = document.getElementById('audio');
+            audio.play();
+
+            // Imposta un timeout per la durata della GIF e del suono
+            var gifDuration = 4000; // Durata della GIF in millisecondi (5 secondi)
+            var audioDuration = audio.duration * 1000; // Durata del suono in millisecondi
+
+            // Usa il tempo minore tra GIF e suono
+            var totalDuration = Math.min(gifDuration, audioDuration);
+
+            // Ricarica la pagina dopo la durata totale
+            setTimeout(function() {
+                location.reload();
+            }, totalDuration);
+        });
+    </script>
+    <script type="text/javascript" async   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">  </script>
+
+</body>
+</html>
