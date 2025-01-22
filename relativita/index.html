@@ -4,61 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOP SECRET</title>
-    <style>
-        h1,h2{
-                        text-align: center;
-        }
-        body {
-            font-family: Arial, sans-serif;
-             line-height: 1.6;
-  margin: 20px;
-            padding: 0;
-        }
-        #fixedButton {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-#gifContainer {
-    display: none; 
-    position: fixed; /* Cambia da statico a fixed per sovrapporre il contenuto */
-    top: 0; /* Posiziona il contenitore in alto */
-    left: 0; /* Posiziona il contenitore a sinistra */
-    width: 100%; 
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.8); /* Sfondo semi-trasparente per evidenziare la GIF */
-    z-index: 9999; /* Assicurati che sia sopra altri contenuti */
-    justify-content: center; /* Centra orizzontalmente */
-    align-items: center; /* Centra verticalmente */
-}
-
-
-        .hover-text {
-            position: relative; /* Aggiunto per il posizionamento corretto */
-            display: inline-block; /* Assicura che l'elemento occupi solo lo spazio necessario */
-        }
-
-        .hover-text::after {
-            content: attr(data-content);
-            position: absolute;
-            left: 0;
-            top: 100%;
-            opacity: 0; /* Inizialmente nascosto */
-            transition: opacity 0.3s ease; /* Transizione per l'effetto */
-            background-color: rgba(255, 255, 255, 0.9);
-            border: 1px solid #ccc;
-            padding: 5px;
-            white-space: nowrap; /* Impedisce il ritorno a capo */
-            z-index: 1; /* Assicura che il testo sia sopra */
-        }
-
-        .hover-text:hover::after {
-            opacity: 1; /* Mostra il testo al passaggio del mouse */
-        }
-    </style>
+      <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
@@ -74,7 +20,8 @@
     <p>\(p_{i_{\mu}}=\begin{pmatrix} E_{\text{riposo}} \\ \vec{\mathbf{p}} \end{pmatrix} {}_{\searrow }^{\nearrow } \begin{array}{c} \text{particella massiva:}\quad \begin{pmatrix} E_{0} \\ \vec{\mathbf{p}} \end{pmatrix}=\begin{pmatrix} m_{0} c^2 \\ \vec{\mathbf{p}} \end{pmatrix}\\ \text{fotone:}\qquad \qquad\qquad\begin{pmatrix} E_{\gamma} \\ \vec{\mathbf{p}_{\gamma}} \end{pmatrix}=\begin{pmatrix} \hbar \omega \\ \hbar\vec{k} \end{pmatrix}\end{array} \)</p>
 <p>\(\frac{{E_{\gamma}}^2}{c^2}={p_{\gamma}}^2\)</p>
 <p>\(\tan{\theta}=\frac{p'_x}{p'_y}\)</p>
-    
+    <p><a href="../secondaparte/">Vai</a> nella seconda parte</p>
+    <p><a href="../">home</a></p>
  <button id="fixedButton">NON TOCCARE!</button>
     <div id="gifContainer">
         <img id="gif" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjlod3RubWpjeTF4bzNiNWdyMjI5M3A0ZDlweGxuNG8zMTZzanAyayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/urp8cVywl1Sk8/giphy.gif" alt="Loading..." />
